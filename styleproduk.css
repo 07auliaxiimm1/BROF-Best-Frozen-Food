@@ -1,0 +1,88 @@
+body {
+    background-color: #D6EAF8 ;
+}
+li {
+    list-style: none;
+   }
+.header {
+    background-color:#79BBD2;
+    color: #fff;
+    height: 120px;
+   }
+.header-logo img {
+    float: left;
+    width: 100px;
+    height: 80px;
+    border: solid blue;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 15px;
+	background-color: white;
+   }
+.header-list p {
+    float: left;
+    background-color: blue;
+    border: solid black;
+    margin: 38px 20px;
+    border-radius: 10px;
+    background-size: contain;
+    width: 150px;
+	height: 20px;
+    text-align: center;
+    border-width: 2px;
+}
+.header-list:hover p  {
+    color: yellow;
+    background-color: red;
+}
+.hotsale {
+    float: left;
+    background-color: white;
+	width:100%;
+}
+
+.hotsale-item {
+    float: left;
+    display: block;
+    float: left;
+    padding-left: 10px;
+}
+.hotsale-p p{
+    text-align: center;
+	background-color: #63C3EC;
+    height: 40px;
+	font-family: arial black;
+	font-size: 24px;
+}
+.hotsale-item img {
+	float: left;
+    height: 200px;
+    width: 200px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: solid cornsilk;
+}
+.hotsale-item p {
+    text-align: center;
+    background-color: red;
+    border-radius: 10px;
+    border: solid blue ;
+    display: block;
+    margin-left: 40px;
+    color: white;
+}
+.hotsale-item:hover p {
+    color: red;
+    background-color:yellow;
+}
+.footer {
+	background-color: #63C3EC;
+    color: #060606;
+    height: 90px;
+    display: block;
+    margin-top: 100px;
+	text-align: center;
+	font-size: 50px;
+	font-family: times new roman;
+   }
+   

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+			button {
+				width: 100%;
+				height: 40px;
+				background-color: #4CAF50;
+				border: none;
+				color: white;
+				padding: 10px;
+				font-size: 16px;
+				cursor: pointer;	
+			}
+		</style> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styletransaksi.css">
+    <title>TRANSAKSI</title>
+</head>
+<body>
+<div>
+   <br>
+    <div class="header">		
+         <div class="header-logo"><img src="https://drive.google.com/uc?export=view&amp;id=1ZQzBzY6wdw081ClyxCHhNiK5pkW7m9Mm" alt=""></div>
+         <div class="header-list">
+			<ul><li onclick="window.history.back()"><p>Beranda</p></li>
+			</ul>
+         </div>
+		 <div class="header-list">
+			<ul><li onclick="window.location.href='kontak.html'"><p>Kontak</p></li>
+			</ul>
+         </div>
+         <div class="header-list">
+			<ul><li onclick="window.location.href='produk.html'"><p>Produk</p></li>
+			</ul>
+         </div>
+         <div class="header-list">
+			<ul><li onclick="window.location.href='transaksi.html'"><p>Transaksi</p></li>
+			</ul>
+         </div>
+	</div>
+	<div class="main">
+  		<p>Silahkan pesan melalui tabel dibawah ini</p>
+	</div>
+	<div class="copy-container">
+	<center>
+	<table border="1" style="background-color: white"> 
+	<tr style= "background-color:#2875FD ">
+		<th colspan="2">PERHITUNGAN BELANJA</th>
+	</tr>
+	<tr style= "background-color:#ADC3E8">
+		<td colspan="2" align="center">BROF-Best Frozen Food</td>
+	</tr>
+	<tr>
+		<td>NAMA BARANG</td>
+		<td><input type="text" id="ipt_namaBarang"></td>
+	</tr>
+	<tr>
+		<td>HARGA BARANG</td>
+		<td><input type="text" id="ipt_hargaBarang"></td>
+	</tr>
+	<tr>
+		<td>JUMLAH BARANG</td>
+		<td><input type="text" id="ipt_jumlahBarang"></td>
+	</tr>
+	<tr>
+		<td>DISKON</td>
+		<td><input type="text" id="ipt_diskon"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button onclick="hitung()">Hitung</button></td>
+	</tr>
+	<tr style= "background-color:#2875FD ">
+		<th colspan="2">HASIL BELANJA</th>
+	</tr>
+	<tr style= "background-color:#ADC3E8">
+		<td colspan="2" align="center">BROF-Best Frozen Food</td>
+	</tr>
+	<tr>
+		<td>NAMA BARANG</td>
+		<td><input type="text" id="opt_namaBarang" disabled></td>
+	</tr>
+	<tr>
+		<td>HARGA BARANG</td>
+		<td><input type="text" id="opt_hargaBarang" disabled></td>		
+	</tr>
+	<tr>
+		<td>JUMLAH BARANG</td>
+		<td><input type="text" id="opt_jumlahBarang" disabled></td>
+	</tr><tr>
+		<td>DISKON</td>
+		<td><input type="text" id="opt_diskon" disabled></td>
+	</tr><tr>
+		<td>TOTAL HARGA</td>
+		<td><input type="text" id="opt_totalHarga" disabled></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button onclick="reset()">Reset</button></td>
+	</tr>
+	</center>
+</table>
+<script>
+  var namaBarang;
+  var hargaBarang;
+  var jumlahBarang;
+  var diskon;
+  
+  function hitung() {
+	namaBarang = (document.getElementById("ipt_namaBarang").value);
+	hargaBarang = parseFloat(document.getElementById("ipt_hargaBarang").value);
+	jumlahBarang = parseFloat(document.getElementById("ipt_jumlahBarang").value);
+	diskon = parseFloat(document.getElementById("ipt_diskon").value);
+	totalHarga = (hargaBarang* jumlahBarang) - (hargaBarang * jumlahBarang * diskon/100);
+	document.getElementById('opt_namaBarang').value = namaBarang;
+	document.getElementById('opt_hargaBarang').value = hargaBarang;
+	document.getElementById('opt_jumlahBarang').value = jumlahBarang;
+	document.getElementById('opt_diskon').value = diskon + "%";
+	document.getElementById('opt_totalHarga').value = totalHarga;
+}
+  function reset() {
+    document.getElementById('ipt_namaBarang').value = "";
+	document.getElementById('ipt_hargaBarang').value = "";
+	document.getElementById('ipt_jumlahBarang').value = "";
+	document.getElementById('ipt_diskon').value = "";
+	document.getElementById('opt_namaBarang').value = "";
+	document.getElementById('opt_hargaBarang').value = "";
+	document.getElementById('opt_jumlahBarang').value = "";
+	document.getElementById('opt_diskon').value = "";
+	document.getElementById('opt_totalHarga').value = "";
+	}
+  </script>	  
+    </div>
+    <div class="footer">
+		<div class="footer-logo">SHOP</div>
+        <div class="footer-list">
+             <ul>
+                 <li>BROF</li>
+                 <li>Belanja Murah</li>
+             </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>TERIMAKASIH</P>
+         </div>
+    </div>
+</body>
+</html>
